@@ -141,3 +141,13 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Docs
+docs/
+
+# SQLite runtime
+*.db
+
+# Deepwork state (git-local)
+.slim/deepwork/
+.ignore

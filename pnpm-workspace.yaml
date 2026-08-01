@@ -1,0 +1,8 @@
+allowBuilds:
+  esbuild: true
+  lefthook: true
+onlyBuiltDependencies:
+  - lefthook
+  - "@biomejs/biome"
+  - "@libsql/client"
+  - esbuild
