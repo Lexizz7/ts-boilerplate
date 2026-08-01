@@ -22,9 +22,31 @@
   },
   "linter": {
     "rules": {
-      "preset": "recommended"
+      "preset": "recommended",
+      "style": {
+        "noRestrictedImports": {
+          "level": "error",
+          "options": {
+            "paths": {
+              "dayjs": "Use 'datetime' from '#lib/datetime' instead of importing dayjs directly."
+            }
+          }
+        }
+      }
     }
   },
+  "overrides": [
+    {
+      "includes": ["src/lib/datetime.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": "off"
+          }
+        }
+      }
+    }
+  ],
   "assist": {
     "actions": {
       "source": {
