@@ -6,11 +6,11 @@
     "erasableSyntaxOnly": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
+    "exactOptionalPropertyTypes": false,
     "rootDir": "src",
     "outDir": "dist"
   },
