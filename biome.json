@@ -31,6 +31,14 @@
               "dayjs": "Use 'datetime' from '#lib/datetime' instead of importing dayjs directly."
             }
           }
+        },
+        "noRestrictedGlobals": {
+          "level": "error",
+          "options": {
+            "deniedGlobals": {
+              "process": "Use 'env' from '#lib/env' instead of accessing process.env directly."
+            }
+          }
         }
       }
     }
@@ -42,6 +50,16 @@
         "rules": {
           "style": {
             "noRestrictedImports": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/lib/env.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedGlobals": "off"
           }
         }
       }
