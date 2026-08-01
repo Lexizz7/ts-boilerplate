@@ -28,7 +28,8 @@
           "level": "error",
           "options": {
             "paths": {
-              "dayjs": "Use 'datetime' from '#lib/datetime' instead of importing dayjs directly."
+              "dayjs": "Use 'datetime' from '#lib/datetime' instead of importing dayjs directly.",
+              "ky": "Use 'httpClient' from '#lib/http' instead of importing ky directly."
             }
           }
         },
@@ -36,7 +37,8 @@
           "level": "error",
           "options": {
             "deniedGlobals": {
-              "process": "Use 'env' from '#lib/env' instead of accessing process.env directly."
+              "process": "Use 'env' from '#lib/env' instead of accessing process.env directly.",
+              "fetch": "Use 'httpClient' from '#lib/http' instead of using the global fetch function directly."
             }
           }
         }
@@ -45,7 +47,7 @@
   },
   "overrides": [
     {
-      "includes": ["src/lib/datetime.ts"],
+      "includes": ["src/lib/datetime.ts", "src/lib/http.ts"],
       "linter": {
         "rules": {
           "style": {

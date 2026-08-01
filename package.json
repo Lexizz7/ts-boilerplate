@@ -8,14 +8,16 @@
     "node": ">=24.0.0"
   },
   "scripts": {
-    "dev": "node --import tsx --watch src/main.ts",
+    "dev": "tsx --watch src/main.ts",
     "start": "tsdown && node dist/main.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "biome check --write",
+    "lint:check": "biome check",
     "format": "biome format --write",
-    "ci": "pnpm typecheck && biome check && pnpm test"
+    "validate": "pnpm format && pnpm lint && pnpm typecheck && pnpm test",
+    "ci": "pnpm typecheck && pnpm lint:check && pnpm test"
   },
   "imports": {
     "#lib/*": "./src/lib/*.ts"
@@ -23,6 +25,7 @@
   "dependencies": {
     "dayjs": "^1.11.21",
     "dotenv": "^17.0.0",
+    "ky": "^2.0.2",
     "neverthrow": "^8.2.0",
     "pino": "^10.0.0",
     "undici": "^8.0.0",
