@@ -1,0 +1,20 @@
+{
+  "languages": {
+    "TypeScript": {
+      "formatter": "language_server",
+      "language_servers": ["typescript-ls", "!vtsls", "!typescript-language-server", "biome"]
+    },
+    "TSX": {
+      "formatter": "language_server",
+      "language_servers": ["typescript-ls", "!vtsls", "!typescript-language-server", "biome"]
+    },
+    "JSON": {
+      "formatter": "language_server",
+      "language_servers": ["biome", "json-language-server"]
+    },
+    "JSONC": {
+      "formatter": "language_server",
+      "language_servers": ["biome", "json-language-server"]
+    }
+  }
+}
